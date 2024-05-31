@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const accordionButtons = document.querySelectorAll(".documents__accordion");
 
   accordionButtons.forEach((accordion) => {
-    accordion.addEventListener("click", () => {
+    accordion.addEventListener("click", function ()  {
       this.classList.toggle("documents__accordion--active");
       const documentsList = this.nextElementSibling;
       documentsList.classList.toggle("documents__list--active");
