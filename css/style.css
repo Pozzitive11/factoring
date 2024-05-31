@@ -112,6 +112,11 @@ main {
   overflow: hidden;
   cursor: pointer;
 }
+.dropdown::after {
+  content: "       ▼";
+  color: #96d526;
+  font-size: 14px;
+}
 
 .dropdown .dropbtn {
   padding: 0;
@@ -134,9 +139,8 @@ main {
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 100;
   left: 268px;
-  /* top: 60px; */
 }
 .dropdown-content li {
   text-align: center;
