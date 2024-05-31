@@ -92,20 +92,19 @@ main {
   -ms-flex-positive: 1;
   flex-grow: 1;
   padding: 5px 0;
-  border-bottom: 3px solid transparent;
 }
 
-.nav__item:hover {
-  border-bottom: 3px solid #96d526;
-}
 .nav__link {
   display: block;
   font-size: 16px;
   line-height: 1.3;
-  border-bottom: 5px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+.nav__link:hover {
+  border-bottom: 3px solid #577b8d;
 }
 .nav__link.active {
-  border-bottom: 3px solid #96d526;
+  border-bottom: 3px solid #577b8d;
 }
 
 .dropdown {
@@ -114,7 +113,7 @@ main {
 }
 .dropdown::after {
   content: "       ▼";
-  color: #96d526;
+  color: #344c64;
   font-size: 14px;
 }
 
@@ -158,7 +157,7 @@ main {
   .dropdown-content {
     width: 100%;
     left: 0;
-    bottom: -193px;
+    bottom: -174px;
   }
 }
 /* BURGER */
@@ -276,7 +275,7 @@ main {
   line-height: 72px;
 }
 .hero__link {
-  background: #96d526;
+  background: #577b8d;
   color: #fff;
   padding: 14px 36px;
   font-size: 20px;
@@ -397,8 +396,10 @@ main {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   border-top: none;
-  color: #ff8562;
   padding-left: 15px;
+}
+.documents__list--active {
+  max-height: 100%;
 }
 .document__item:last-child {
   padding-bottom: 10px;
@@ -409,6 +410,7 @@ main {
 }
 .document__link {
   font-size: 16px;
+  color: #57a6a1;
   line-height: 1.55;
 }
 /* BUSINESS */
@@ -422,7 +424,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  color: #ff8562;
 }
 .business__item {
   text-align: center;
@@ -431,6 +432,7 @@ main {
   text-decoration: underline;
 }
 .business__link {
+  color: #57a6a1;
   font-size: 20px;
   line-height: 1.55;
 }
@@ -439,6 +441,6 @@ main {
 .footer {
   padding: 14px 0;
   color: #fff;
-  background-color: #226bab;
+  background-color: #344c64;
   text-align: center;
 }
