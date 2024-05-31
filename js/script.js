@@ -1,4 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll('a.nav__link');
+  links.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const href = this.getAttribute('href');
+      loadPage(href);
+      history.pushState(null, '', href);
+    });
+  });
+
+  window.addEventListener('popstate', () => {
+    loadPage(window.location.pathname);
+  });
+
+  function loadPage(url) {
+    fetch(url)
+      .then(response => response.text())
+      .then(html => {
+        document.querySelector('main').innerHTML = html;
+      })
+      .catch(err => console.error('Error loading page:', err));
+  }
+
+  // Initial load
+  loadPage(window.location.pathname);
   // BURGER MENU
   const menuBtn = document.querySelector(".burger");
   const menu = document.querySelector(".nav__list");
