@@ -1,0 +1,9 @@
+# Redirect from HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^(www\.)?factoringp\.ua$ [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Your existing rules for .html extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]

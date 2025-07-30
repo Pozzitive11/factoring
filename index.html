@@ -18,7 +18,7 @@
     <header class="header">
       <div class="container">
         <div class="header__content">
-          <a class="header__logo" href="index.html">
+          <a class="header__logo" href="/">
             <img src="./images/logo.png" alt="ФАКТОРИНГ ПАРТНЕРС" />
           </a>
           <nav class="nav">
@@ -27,39 +27,46 @@
               <span></span>
               <span></span>
             </div>
+
             <ul class="nav__list">
               <li class="nav__item" id="home">
-                <a class="nav__link active" href="index.html">Головна</a>
+                <a class="nav__link active" href="/">Головна</a>
               </li>
               <li class="nav__item" id="about-company">
-                <a class="nav__link" href="about-company.html">Про компанію</a>
+                <a class="nav__link" href="/about-company">Про компанію</a>
               </li>
               <li class="nav__item" id="documents">
-                <a class="nav__link" href="documents.html">Документи</a>
+                <a class="nav__link" href="/documents">Документи</a>
               </li>
 
               <li class="nav__item" id="contacts">
-                <a class="nav__link" href="contacts.html">Контакти</a>
+                <a class="nav__link" href="/contacts">Контакти</a>
               </li>
               <div class="dropdown">
                 <button class="dropbtn">
-                  Бізнеси
+                  Клієнтам-боржникам
                   <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                  <li class="nav__item" id="contacts">
-                    <a class="nav__link" href="loani.html">КТІК (Лоані)</a>
+                  <li class="nav__item" id="loani">
+                    <a class="nav__link" href="/loani">КТІК (Лоані)</a>
                   </li>
-                  <li class="nav__item" id="contacts">
-                    <a class="nav__link" href="ukr-kredit-finance.html"
+                  <li class="nav__item" id="ukr-kredit-finance">
+                    <a class="nav__link" href="/ukr-kredit-finance"
                       >УКР КРЕДИТ ФІНАНС</a
                     >
                   </li>
-                  <li class="nav__item" id="contacts">
-                    <a class="nav__link" href="kachay-groshi.html">Качай гроші</a>
+                  <li class="nav__item" id="kachay-groshi">
+                    <a class="nav__link" href="/kachay-groshi">Качай гроші</a>
                   </li>
-                  <li class="nav__item" id="contacts">
-                    <a class="nav__link" href="avans-kredit.html">Аванс кредит</a>
+                  <li class="nav__item" id="avans-kredit">
+                    <a class="nav__link" href="/avans-kredit">Аванс кредит</a>
+                  </li>
+                  <li class="nav__item" id="eapb-fp">
+                    <a class="nav__link" href="/eapb-fp">ЄАПБ ФП</a>
+                  </li>
+                  <li class="nav__item" id="miloan">
+                    <a class="nav__link" href="/miloan">Мілоан</a>
                   </li>
                 </div>
               </div>
@@ -75,11 +82,29 @@
             <h1 class="hero__title">
               <span>ФАКТОРИНГ ПАРТНЕРС</span>
             </h1>
-            <a class="hero__link" href="about-company.html">Про комнанію</a>
+            <a class="hero__link" href="/about-company">Про компанію</a>
           </div>
         </div>
       </div>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <span class="footer__copyright footer__copyright--main"
+          >Повідомлення про належність споживача до захищеної категорії,
+          визначеної Законом України "Про споживче кредитування", приймаються за
+          адресою: 03150, місто Київ, вул. Єжи Гедройця, буд. 6, офіс 521;
+          електронна пошта: office@factoringp.ua; телефон: +380(44)374 09 90
+        </span>
+      </div>
+    </footer>
+    <script type="text/javascript">
+      (function(d, w, s) {
+          var widgetHash = '89sRJkjPkueO22NS5jk6', bch = d.createElement(s); bch.type = 'text/javascript'; bch.async = true;
+          bch.src = '//widgets.binotel.com/chat/widgets/' + widgetHash + '.js';
+          var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(bch, sn);
+      })(document, window, 'script');
+      </script>
     <script src="js/script.js"></script>
+    <script src="js/files-lists.js"></script>
   </body>
 </html>

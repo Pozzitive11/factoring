@@ -8,24 +8,29 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   // NAVIGATION
 
-  const title = document.querySelector("title");
-  const currentPath = window.location.pathname.replace(/\.html$/, "").replace(/^\//, "");
+  const currentPath = window.location.pathname
+    .replace(/\.html$/, "")
+    .replace(/^\//, "");
 
+  const title = document.querySelector("title");
   const pageTitleMap = {
-    "index": "ТОВ «КАМПСІС ЛІГАЛ»",
-    "about-company": "Про компанію",
-    "contacts": "Контакти",
-    "documents": "Документи",
-    "loani": "КТІК (Лоані)",
-    "ukr-kredit-finance": "УКР КРЕДИТ ФІНАНС",
-    "kachay-groshi": "Качай гроші",
-    "avans-kredit": "Аванс кредит",
+    index: "ТОВ «КАМПСІС ЛІГАЛ»",
+    "about-company": "",
+    contacts: "",
+    documents: "",
+    loani: "",
+    "ukr-kredit-finance": "",
+    "kachay-groshi": "",
+    "avans-kredit": "",
   };
 
   title.textContent = pageTitleMap[currentPath] || title.textContent;
 
   document.querySelectorAll(".nav__link").forEach((link) => {
-    const href = link.getAttribute("href").replace(/\.html$/, "").replace(/^\//, "");
+    const href = link
+      .getAttribute("href")
+      .replace(/\.html$/, "")
+      .replace(/^\//, "");
     if (currentPath === href) {
       link.classList.add("active");
     } else {
@@ -37,10 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const accordionButtons = document.querySelectorAll(".documents__accordion");
 
   accordionButtons.forEach((accordion) => {
-    accordion.addEventListener("click", function ()  {
+    accordion.addEventListener("click", function () {
       this.classList.toggle("documents__accordion--active");
       const documentsList = this.nextElementSibling;
       documentsList.classList.toggle("documents__list--active");
     });
   });
+
 });
